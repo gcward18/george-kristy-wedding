@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6b8acbf3c3cdb73681672dcfb857c19",
+    "revision": "40c0d720096c07464b15a5dccb699c26",
     "url": "/george-kristy-wedding/index.html"
   },
   {
