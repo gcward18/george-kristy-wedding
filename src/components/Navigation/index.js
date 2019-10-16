@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SignOutButton from '../SignOut';
 import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import * as ROUTES from '../../constants/routes';
@@ -22,7 +20,6 @@ const NavigationAuth = () => (
         <Nav className="ml-auto">
           <Nav.Link href={ROUTES.HOME}>Home</Nav.Link>
           <Nav.Link href={ROUTES.ACCOUNT}>Account</Nav.Link>
-          <Nav.Link href={ROUTES.ADMIN}>Admin</Nav.Link>
         </Nav>
         </Navbar.Collapse>
     </Navbar>
@@ -36,12 +33,6 @@ const NavigationNonAuth = () => (
           <Nav.Link href={ROUTES.SIGN_UP}>Sign up</Nav.Link>
         </Nav>
       </Navbar.Collapse>
-        {/* <li>
-        <Link to={ROUTES.LANDING}>Landing</Link>
-        </li>
-        <li>
-        <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-        </li> */}
     </Navbar>
 );
 export default Navigation;

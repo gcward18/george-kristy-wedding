@@ -25,16 +25,6 @@ class Firebase {
   doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
 
-  addAttendant = (name, num_party, attending, notes) => this.db.collection("attendants").set({
-    name: name,
-    num_party: num_party,
-    attending: attending,
-    notes: notes,
-  }).then(() => {
-    window.alert(name, " Successfuly written!");
-  }).catch(error => {
-    setTimeout(() => {window.alert("Error writing doc: ", error)}, 30000);
-  });
   // *** User API ***
   user = uid => this.db.ref(`users/${uid}`);
   users = () => this.db.ref('users');

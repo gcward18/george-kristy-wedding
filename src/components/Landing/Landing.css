@@ -16,7 +16,7 @@ img.bg {
   div.admin-bg {
     /* Set rules to fill background */
     min-height: 100%;
-    min-width: 1024px;
+    min-width: 100%;
   
     /* Set up proportionate scaling */
     width: 100%;
@@ -28,23 +28,11 @@ img.bg {
     left: 0;
     z-index: -1;
   }
-  .center {
-    display: block;
-    margin-left: 25%;
-    margin-right: auto;
-    width: 50%;
-  }
-  img.relative {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    border: 3px solid #73AD21;
-  }
   /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
   margin-left: 5%;
   float: left;
-  width: 33.33%;
+  width: 50%;
   padding: 5px;
 }
 
@@ -54,25 +42,18 @@ img.bg {
   clear: both;
   display: table;
 }
-  img.absolute {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    border: 3px solid #73AD21;
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    
+    left: 50%;
+    margin-left: -512px;   /* 50% */
   }
-  @media screen and (max-width: 1024px) { /* Specific to this particular image */
-    img.bg {
-      -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-      -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-      
-      left: 50%;
-      margin-left: -512px;   /* 50% */
-    }
-  
-    div.admin-bg {
-      left: 50%;
-      margin-left: -512px;   /* 50% */
-    }
+
+  div.admin-bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
   }
+}
