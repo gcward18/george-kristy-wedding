@@ -15,7 +15,8 @@ import AdminPage from '../Admin';
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
-const App = () => (  <Router>
+const App = () => (  
+  <Router>
     <div>
       <Navigation />
       <hr />

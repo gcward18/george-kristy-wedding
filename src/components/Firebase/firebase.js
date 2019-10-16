@@ -1,6 +1,6 @@
 import app from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/database';
+import 'firebase/firestore';
 const config = {
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -13,7 +13,7 @@ class Firebase {
     constructor() {
         app.initializeApp(config);
         this.auth = app.auth();
-        this.db = app.database();
+        this.db = app.firestore();
     }
   // *** Auth API ***
   doCreateUserWithEmailAndPassword = (email, password) =>
@@ -24,6 +24,17 @@ class Firebase {
   doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
   doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
+
+  addAttendant = (name, num_party, attending, notes) => this.db.collection("attendants").set({
+    name: name,
+    num_party: num_party,
+    attending: attending,
+    notes: notes,
+  }).then(() => {
+    window.alert(name, " Successfuly written!");
+  }).catch(error => {
+    setTimeout(() => {window.alert("Error writing doc: ", error)}, 30000);
+  });
   // *** User API ***
   user = uid => this.db.ref(`users/${uid}`);
   users = () => this.db.ref('users');
