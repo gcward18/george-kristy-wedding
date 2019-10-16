@@ -4,7 +4,6 @@ import { Image, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import BG from '../../img/kristy_george.png';
 import GM from '../../img/getting_married.png';
-import TM from '../../img/kristy_george_teton.jpg';
 export default class Landing extends Component {
     render() {
         return (

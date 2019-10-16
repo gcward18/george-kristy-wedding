@@ -19,6 +19,7 @@ const NavigationAuth = () => (
         <Navbar.Collapse>
         <Nav className="ml-auto">
           <Nav.Link href={ROUTES.HOME}>Home</Nav.Link>
+          <Nav.Link href={ROUTES.GALLERY}>Gallery</Nav.Link>
           <Nav.Link href={ROUTES.ACCOUNT}>Account</Nav.Link>
         </Nav>
         </Navbar.Collapse>

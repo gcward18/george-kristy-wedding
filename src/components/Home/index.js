@@ -29,7 +29,7 @@ class HomePageBase extends Component{
   }
   onSubmit = event => {
     const { name, num_party, attending, notes } = this.state;
-    var isAttending = (attending == "Yes");
+    var isAttending = (attending === "Yes");
 
     this.db.collection("attendants").doc(name).set({
       name,
@@ -44,7 +44,6 @@ class HomePageBase extends Component{
     this.setState({ [event.target.name]: event.target.value});
   };
   render() {
-    const { name, num_party, attending, notes } = this.state;
     return (
 
       <Form onSubmit={this.onSubmit}>
@@ -90,63 +89,3 @@ const HomePageForm = compose(
 )(HomePageBase);
 export default HomePage;
 export {HomePageForm};
-
-
-{/* <form onSubmit={this.onSubmit} className="row">
-          <Row>
-            <Col>
-              <h3>Name:</h3>
-              <input
-                name="name"
-                value={name}
-                onChange={this.onChange}
-                type="text"
-                placeholder="Full Name"
-              />
-            </Col>
-            <Col>
-              <h3>Number in Party:</h3>
-              <input
-                name="num_party"
-                value={num_party}
-                onChange={this.onChange}
-                type="number"
-                min="0"
-                placeholder="Number in Party"
-            />
-            </Col>
-            <Col>
-            
-              <h3>Attending:</h3>
-              <input
-                id="attending"
-                value={attending}
-                onChange={this.onChange}
-                type="checkbox"
-              />
-            </Col>
-            
-          </Row>
-          <Row>
-            {/* <Col>
-              <h3>Notes:</h3>
-              <textarea
-                name="notes"
-                value={notes}
-                onChange={this.onChange}
-                type="text"
-                style={{
-                  rows: 50,
-                  cols: 1000,
-                  width: '50%',
-                  height: '50%'
-                }}
-                placeholder="Notes for Bride and Groom"
-              />
-            </Col> 
-            <Col>
-              <input type="submit" value="Submit"></input>
-            </Col>
-          </Row>
-        </form>
-      </Container> */}
