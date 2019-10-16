@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/george-kristy-wedding/static/css/main.d735d2e6.chunk.css",
+    "main.js": "/george-kristy-wedding/static/js/main.fcf002dc.chunk.js",
+    "main.js.map": "/george-kristy-wedding/static/js/main.fcf002dc.chunk.js.map",
+    "runtime-main.js": "/george-kristy-wedding/static/js/runtime-main.2e1bf3cc.js",
+    "runtime-main.js.map": "/george-kristy-wedding/static/js/runtime-main.2e1bf3cc.js.map",
+    "static/css/2.510409cd.chunk.css": "/george-kristy-wedding/static/css/2.510409cd.chunk.css",
+    "static/js/2.3243760d.chunk.js": "/george-kristy-wedding/static/js/2.3243760d.chunk.js",
+    "static/js/2.3243760d.chunk.js.map": "/george-kristy-wedding/static/js/2.3243760d.chunk.js.map",
+    "index.html": "/george-kristy-wedding/index.html",
+    "precache-manifest.54731276e16ecdbf69a99c7b872dbee5.js": "/george-kristy-wedding/precache-manifest.54731276e16ecdbf69a99c7b872dbee5.js",
+    "service-worker.js": "/george-kristy-wedding/service-worker.js",
+    "static/css/2.510409cd.chunk.css.map": "/george-kristy-wedding/static/css/2.510409cd.chunk.css.map",
+    "static/css/main.d735d2e6.chunk.css.map": "/george-kristy-wedding/static/css/main.d735d2e6.chunk.css.map",
+    "static/media/family_thanksgiving.jpg": "/george-kristy-wedding/static/media/family_thanksgiving.ad9ac46e.jpg",
+    "static/media/first_dates.jpg": "/george-kristy-wedding/static/media/first_dates.8336b502.jpg",
+    "static/media/getting_married.png": "/george-kristy-wedding/static/media/getting_married.5611bf42.png",
+    "static/media/kristy_george.png": "/george-kristy-wedding/static/media/kristy_george.ea8cd5c1.png",
+    "static/media/kristy_george_grand_canyon.jpg": "/george-kristy-wedding/static/media/kristy_george_grand_canyon.5fc03c55.jpg",
+    "static/media/kristy_george_lake_teton.jpg": "/george-kristy-wedding/static/media/kristy_george_lake_teton.7afa571f.jpg",
+    "static/media/kristy_george_teton.jpg": "/george-kristy-wedding/static/media/kristy_george_teton.fac05b99.jpg",
+    "static/media/military_banquet.jpg": "/george-kristy-wedding/static/media/military_banquet.060fda32.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e1bf3cc.js",
+    "static/css/2.510409cd.chunk.css",
+    "static/js/2.3243760d.chunk.js",
+    "static/css/main.d735d2e6.chunk.css",
+    "static/js/main.fcf002dc.chunk.js"
+  ]
+}
