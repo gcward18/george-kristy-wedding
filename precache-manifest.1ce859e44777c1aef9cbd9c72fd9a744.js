@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e24a92c6f42f9a4c1608aba0b1ec1dbb",
+    "revision": "b20054db308c04ea65e22d653fd53e56",
     "url": "/george-kristy-wedding/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/george-kristy-wedding/static/css/2.510409cd.chunk.css"
   },
   {
-    "revision": "dc88dc45418773507df6",
+    "revision": "294514c41696069f99e6",
     "url": "/george-kristy-wedding/static/css/main.d735d2e6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/george-kristy-wedding/static/js/2.52accd38.chunk.js"
   },
   {
-    "revision": "dc88dc45418773507df6",
-    "url": "/george-kristy-wedding/static/js/main.447bcf6a.chunk.js"
+    "revision": "294514c41696069f99e6",
+    "url": "/george-kristy-wedding/static/js/main.eb775a96.chunk.js"
   },
   {
     "revision": "a0773162bb6f393b113b",
