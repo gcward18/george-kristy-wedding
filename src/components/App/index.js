@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-    BrowserRouter as Router,
+    HashRouter,
     Route 
 } from 'react-router-dom';
 
@@ -8,30 +8,30 @@ import Navigation from '../Navigation';
 import LandingPage from '../Landing';
 import SignUpPage from '../SignUp';
 import SignInPage from '../SignIn';
-import PasswordForgetPage from '../PasswordForget';
+import SignOutButton from '../SignOut';
 import HomePage from '../Home';
 import AccountPage from '../Account';
 import GalleryPage from '../Gallery';
+import DetailsPage from '../Details';
 
-import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 const App = () => (  
-  <Router>
+  <HashRouter>
     <div>
       <Navigation />
       <hr />
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-      <Route
-        path={ROUTES.PASSWORD_FORGET}
-        component={PasswordForgetPage}
-      />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route path={ROUTES.GALLERY} component={GalleryPage} />
+      <Route path={'/landing'} component={LandingPage} />
+      <Route path={'/details'} component={DetailsPage} />
+      <Route path={'/home'} component={HomePage} />
+      <Route path={'/signup'} component={SignUpPage} />
+      <Route path={'/signin'} component={SignInPage} />
+      <Route path={'/signout'} component={SignOutButton} />
+      
+      <Route path={'/account'} component={AccountPage} />
+      <Route path={'/gallery'} component={GalleryPage} />
+      <Route path={'//'} component={LandingPage} />
     </div>
-  </Router>
+  </HashRouter>
 );
 
 export default withAuthentication(App);

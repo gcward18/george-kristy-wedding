@@ -18,9 +18,11 @@ const NavigationAuth = () => (
         <Navbar.Brand href={ROUTES.LANDING}>Kristy & George</Navbar.Brand>
         <Navbar.Collapse>
         <Nav className="ml-auto">
-          <Nav.Link href={ROUTES.HOME}>Home</Nav.Link>
-          <Nav.Link href={ROUTES.GALLERY}>Gallery</Nav.Link>
-          <Nav.Link href={ROUTES.ACCOUNT}>Account</Nav.Link>
+          <Nav.Link href={ROUTES.HOME}>RSVP</Nav.Link>
+          <Nav.Link href={ROUTES.DETAILS}>DETAILS</Nav.Link>
+          <Nav.Link href={ROUTES.GALLERY}>GALLERY</Nav.Link>
+          <Nav.Link href={ROUTES.ACCOUNT}>ACCOUNT</Nav.Link>
+          <Nav.Link href={ROUTES.SIGN_OUT}>SIGN IN</Nav.Link>
         </Nav>
         </Navbar.Collapse>
     </Navbar>

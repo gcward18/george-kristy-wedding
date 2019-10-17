@@ -29,7 +29,7 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.HOME);
+        this.props.history.push('/');
       })
       .catch(error => {
         this.setState({ error });
@@ -61,7 +61,7 @@ class SignInFormBase extends Component {
         <button disabled={isInvalid} type="submit">
           Sign In
         </button>
-        {error && <p>{error.message}</p>}
+        {error && <p>Error</p>}
       </form>
     );
   }

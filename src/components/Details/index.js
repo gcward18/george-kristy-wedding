@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
-import { Image, Container, Carousel, CarouselItem } from 'react-bootstrap';
+import { Image, Accordion, Card, Button, CarouselItem } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import app from 'firebase/app';
 import 'firebase/firestore';
@@ -16,9 +16,9 @@ import GC from '../../img/kristy_george_grand_canyon.jpg';
 import LT from '../../img/kristy_george_lake_teton.jpg';
 import GT from '../../img/kristy_george_teton.jpg';
 import MB from '../../img/military_banquet.jpg';
-const GalleryPage = () => (
+const DetailsPage = () => (
   <div>
-    <GalleryPageForm/>
+    <DetailsPageForm/>
   </div>
 )
 const INITIAL_STATE = [
@@ -51,7 +51,7 @@ const INITIAL_STATE = [
         img:MB
     }];
 
-class GalleryPageBase extends Component{
+class DetailsPageBase extends Component{
   constructor(props) {
     super(props);
     this.state = { ...INITIAL_STATE };
@@ -94,20 +94,43 @@ class GalleryPageBase extends Component{
     }
 
     return (
-        <Container style={{ display:'flex', justifyContent:'center' }}>
-            <Carousel>
-            {elements}
-            </Carousel>
-        </Container>
-      
+        <Accordion defaultActiveKey="0">
+            <Card>
+                <Card.Header>
+                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                    Date
+                </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="0">
+                <Card.Body>
+                    15 December 2019
+                </Card.Body>
+                </Accordion.Collapse>
+            </Card>
+            <Card>
+                <Card.Header>
+                <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                    Location
+                </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="1">
+                <Card.Body>
+                    BREAD + BUTTER
+                    <br/>2586 N Westwood Blvd, 
+                    <br/>Poplar Bluff, MO 63901
+                </Card.Body>
+                </Accordion.Collapse>
+            </Card>
+        </Accordion>
+            
     );
   }
 }
 const condition = authUser => !!authUser;
-const GalleryPageForm = compose(
+const DetailsPageForm = compose(
   withAuthorization(condition),
   withRouter,
   withFirebase,
-)(GalleryPageBase);
-export default GalleryPage;
-export {GalleryPageForm};
+)(DetailsPageBase);
+export default DetailsPage;
+export {DetailsPageForm};

@@ -20,7 +20,6 @@ export default class Landing extends Component {
                         height: '100%',
                         width: '100%',
                     }}
-                    rounded 
                     fluid/>
               </Col>
             </Row>
