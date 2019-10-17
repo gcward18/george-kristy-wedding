@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/george-kristy-wedding/precache-manifest.b4dac88a9d79658299a71056f4f431cf.js"
+  "/george-kristy-wedding/precache-manifest.efaae2a1ce5fbb8bb83c61c4bb57024c.js"
 );
 
 self.addEventListener('message', (event) => {
