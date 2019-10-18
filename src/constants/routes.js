@@ -1,11 +1,5 @@
 var kg = '/george-kristy-wedding/'
-export const LANDING = `${kg}#/landing`;
-export const SIGN_UP = `${kg}#/signup`;
-export const SIGN_IN = `${kg}#/signin`;
-export const SIGN_OUT = `${kg}#/signout`;
+export const LANDING = `${kg}#/`;
 export const DETAILS = `${kg}#/details`;
-export const HOME = `${kg}#/home`;
-export const ACCOUNT = `${kg}#/account`;
-export const ADMIN = `${kg}#/admin`;
-export const PASSWORD_FORGET = `${kg}#/pw-forget`;
+export const RSVP = `${kg}#/rsvp`;
 export const GALLERY = `${kg}#/gallery`;

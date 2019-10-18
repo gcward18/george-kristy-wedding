@@ -6,57 +6,28 @@ import { Image, Accordion, Card, Button, CarouselItem } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import app from 'firebase/app';
 import 'firebase/firestore';
-import { withAuthorization } from '../Session';
 import { withFirebase } from '../Firebase';
 
-import BG from '../../img/kristy_george.png';
-import FTG from '../../img/family_thanksgiving.jpg';
-import FD from '../../img/first_dates.jpg';
-import GC from '../../img/kristy_george_grand_canyon.jpg';
-import LT from '../../img/kristy_george_lake_teton.jpg';
-import GT from '../../img/kristy_george_teton.jpg';
-import MB from '../../img/military_banquet.jpg';
 const DetailsPage = () => (
   <div>
     <DetailsPageForm/>
   </div>
 )
-const INITIAL_STATE = [
-    {
-        title:'Engagement Photos',
-        img:BG  
-    },
-    {
-        title:'Thanksgiving /W Family',
-        img:FTG
-    },
-    {
-        title:'First Dates',
-        img:FD
-    },
-    {
-        title:'Grand Canyon',
-        img:GC
-    },
-    {
-        title:'Lake Day!',
-        img:LT
-    },
-    {
-        title:'Grand Teton',
-        img:GT
-    },
-    {
-        title:'Military Banquet',
-        img:MB
-    }];
+
 
 class DetailsPageBase extends Component{
   constructor(props) {
     super(props);
-    this.state = { ...INITIAL_STATE };
+    this.state = {  };
     this.db = app.firestore();
   }
+  static defaultProps = {
+    center: {
+      lat: 59.95,
+      lng: 30.33
+    },
+    zoom: 11
+  };
   onSubmit = event => {
     const { name, num_party, attending, notes } = this.state;
     var isAttending = (attending === "Yes");
@@ -73,6 +44,7 @@ class DetailsPageBase extends Component{
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value});
   };
+  
   render() {
     var elements = [];
     for(var key in this.state){
@@ -94,10 +66,11 @@ class DetailsPageBase extends Component{
     }
 
     return (
+      
         <Accordion defaultActiveKey="0">
             <Card>
                 <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                <Accordion.Toggle as={Button} variant="text" eventKey="0">
                     Date
                 </Accordion.Toggle>
                 </Card.Header>
@@ -109,7 +82,7 @@ class DetailsPageBase extends Component{
             </Card>
             <Card>
                 <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                <Accordion.Toggle as={Button} variant="text" eventKey="1">
                     Location
                 </Accordion.Toggle>
                 </Card.Header>
@@ -121,14 +94,13 @@ class DetailsPageBase extends Component{
                 </Card.Body>
                 </Accordion.Collapse>
             </Card>
+
         </Accordion>
-            
+        
     );
   }
 }
-const condition = authUser => !!authUser;
 const DetailsPageForm = compose(
-  withAuthorization(condition),
   withRouter,
   withFirebase,
 )(DetailsPageBase);
