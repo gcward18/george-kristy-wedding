@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/george-kristy-wedding/static/css/main.d735d2e6.chunk.css",
-    "main.js": "/george-kristy-wedding/static/js/main.6ea40fe1.chunk.js",
-    "main.js.map": "/george-kristy-wedding/static/js/main.6ea40fe1.chunk.js.map",
+    "main.js": "/george-kristy-wedding/static/js/main.acd169da.chunk.js",
+    "main.js.map": "/george-kristy-wedding/static/js/main.acd169da.chunk.js.map",
     "runtime-main.js": "/george-kristy-wedding/static/js/runtime-main.2e1bf3cc.js",
     "runtime-main.js.map": "/george-kristy-wedding/static/js/runtime-main.2e1bf3cc.js.map",
     "static/css/2.510409cd.chunk.css": "/george-kristy-wedding/static/css/2.510409cd.chunk.css",
-    "static/js/2.831f4037.chunk.js": "/george-kristy-wedding/static/js/2.831f4037.chunk.js",
-    "static/js/2.831f4037.chunk.js.map": "/george-kristy-wedding/static/js/2.831f4037.chunk.js.map",
+    "static/js/2.d62d8fba.chunk.js": "/george-kristy-wedding/static/js/2.d62d8fba.chunk.js",
+    "static/js/2.d62d8fba.chunk.js.map": "/george-kristy-wedding/static/js/2.d62d8fba.chunk.js.map",
     "index.html": "/george-kristy-wedding/index.html",
-    "precache-manifest.04945d745efbd261432b3075493a9185.js": "/george-kristy-wedding/precache-manifest.04945d745efbd261432b3075493a9185.js",
+    "precache-manifest.e40c333c43a3947b0aed64dfccb14a46.js": "/george-kristy-wedding/precache-manifest.e40c333c43a3947b0aed64dfccb14a46.js",
     "service-worker.js": "/george-kristy-wedding/service-worker.js",
     "static/css/2.510409cd.chunk.css.map": "/george-kristy-wedding/static/css/2.510409cd.chunk.css.map",
     "static/css/main.d735d2e6.chunk.css.map": "/george-kristy-wedding/static/css/main.d735d2e6.chunk.css.map",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.2e1bf3cc.js",
     "static/css/2.510409cd.chunk.css",
-    "static/js/2.831f4037.chunk.js",
+    "static/js/2.d62d8fba.chunk.js",
     "static/css/main.d735d2e6.chunk.css",
-    "static/js/main.6ea40fe1.chunk.js"
+    "static/js/main.acd169da.chunk.js"
   ]
 }
