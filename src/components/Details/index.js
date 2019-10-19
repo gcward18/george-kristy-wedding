@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
-import { Image, Accordion, Card, Button, CarouselItem } from 'react-bootstrap';
+import {  Accordion, Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import app from 'firebase/app';
 import 'firebase/firestore';
@@ -28,6 +28,7 @@ class DetailsPageBase extends Component{
     },
     zoom: 11
   };
+
   onSubmit = event => {
     const { name, num_party, attending, notes } = this.state;
     var isAttending = (attending === "Yes");
@@ -46,51 +47,56 @@ class DetailsPageBase extends Component{
   };
   
   render() {
-    var elements = [];
-    for(var key in this.state){
-        elements.push(
-            <CarouselItem>
-                <Image 
-                    src={this.state[key]['img']} 
-
-                    style={{
-                      flex: 1,
-                      alignSelf: 'stretch',
-                      width: undefined,
-                      height: undefined
-                    }} 
-                    rounded
-                /> 
-            </CarouselItem>
-        )
-    }
-
+  
     return (
       
         <Accordion defaultActiveKey="0">
             <Card>
                 <Card.Header>
-                <Accordion.Toggle as={Button} variant="text" eventKey="0">
-                    Date
+                <Accordion.Toggle as={Button} variant="text" eventKey="0" style={{fontFamily: 'Josefin Sans, cursive'}}>
+                    DATE
                 </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
-                <Card.Body>
+                <Card.Body style={{fontFamily: 'Josefin Sans, cursive'}}>
                     15 December 2019
                 </Card.Body>
                 </Accordion.Collapse>
             </Card>
             <Card>
                 <Card.Header>
-                <Accordion.Toggle as={Button} variant="text" eventKey="1">
-                    Location
+                <Accordion.Toggle as={Button} variant="text" eventKey="1" style={{fontFamily: 'Josefin Sans, cursive'}}>
+                    LOCATION
                 </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
-                <Card.Body>
-                    BREAD + BUTTER
+                <Card.Body style={{fontFamily:'Josefin Sans, cursive'}}>
+                    <a href="http://breadbutterpb.com/">
+                      BREAD + BUTTER
+                    </a>
                     <br/>2586 N Westwood Blvd, 
                     <br/>Poplar Bluff, MO 63901
+                </Card.Body>
+                </Accordion.Collapse>
+            </Card>
+            <Card>
+                <Card.Header>
+                <Accordion.Toggle as={Button} variant="text" eventKey="2" style={{fontFamily: 'Josefin Sans, cursive'}}>
+                    ACCOMODATIONS
+                </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="2">
+                <Card.Body style={{fontFamily:'Josefin Sans, cursive'}}>
+                    <a href="https://www.choicehotels.com/missouri/poplar-bluff/comfort-inn-hotels/mo637?source=gyxt">
+                    Comfort Inn Poplar Bluff North
+                    </a>
+                    <br/>Kristy has made a block of rooms at Comfort Inn in Poplar Bluff (which is literally <br/>
+                    steps away from where the cermony and reception will be). They have agreed to a rate of $78. <br/>
+                    If you want to stay here, the block is under "Ward Wedding"  <br/>
+                    <br/>
+                    Phone #: 573-686-5200
+                    <br/>
+                    Price: $78
                 </Card.Body>
                 </Accordion.Collapse>
             </Card>

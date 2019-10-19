@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import app from 'firebase/app';
 import 'firebase/firestore';
 import { withFirebase } from '../Firebase';
-import { Transform } from 'stream';
+import Media from 'react-media';
 
 const GalleryPage = () => (
   <div>
@@ -33,7 +33,7 @@ class GalleryPageBase extends Component{
     var key;
     for(key=0; key < this.state.images.length; key++ ){
         elements.push(
-            <CarouselItem key={key} style={{height:'50%'}} fluid>
+            <CarouselItem key={key} fluid>
                 <Image 
                     src={this.state.images[key]} 
 
@@ -42,7 +42,8 @@ class GalleryPageBase extends Component{
                       alignSelf: 'stretch',
                       width: 'auto',
                       height: 'auto',
-                      maxHeight: 800,
+                      minHeight: '100%',
+                      maxHeight: '100%',
                       maxWidth: '100%'
                     }} 
                     rounded
@@ -54,12 +55,58 @@ class GalleryPageBase extends Component{
     }
 
     return (
-        <Container style={{ display:'flex', justifyContent:'center', maxHeight: 800 }}>
-            <Carousel>
-            {elements}
-            </Carousel>
-        </Container>
-      
+        <div>
+          <Media 
+            queries={{
+              small: "(max-width: 599px)",
+              medium: "(min-width: 600px) and (max-width: 1199px)",
+              large: "(min-width: 1200px)"
+            }}
+          >
+            {
+              matches => (
+                <Fragment>
+                  {matches.small && 
+                    <Container 
+                      style={{ 
+                        display:'flex', 
+                        justifyContent:'center', 
+                        maxHeight: 500 
+                      }}>
+                        <Carousel >
+                        {elements}
+                        </Carousel>
+                    </Container>
+                  }
+                  {matches.medium && 
+                    <Container 
+                      style={{ 
+                        display:'flex', 
+                        justifyContent:'center', 
+                        maxHeight: 800 
+                      }}>
+                        <Carousel >
+                        {elements}
+                        </Carousel>
+                    </Container>
+                  }
+                  {matches.large && 
+                    <Container 
+                      style={{ 
+                        display:'flex', 
+                        justifyContent:'center', 
+                        maxHeight: 1100 
+                      }}>
+                        <Carousel >
+                        {elements}
+                        </Carousel>
+                    </Container>
+                  }
+                </Fragment>
+              )
+            }
+          </Media>
+        </div>      
     );
   }
 }
