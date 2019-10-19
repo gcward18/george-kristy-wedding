@@ -82,21 +82,24 @@ class DetailsPageBase extends Component{
             <Card>
                 <Card.Header>
                 <Accordion.Toggle as={Button} variant="text" eventKey="2" style={{fontFamily: 'Josefin Sans, cursive'}}>
-                    ACCOMODATIONS
+                    ACCOMMODATIONS
                 </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="2">
                 <Card.Body style={{fontFamily:'Josefin Sans, cursive'}}>
                     <a href="https://www.choicehotels.com/missouri/poplar-bluff/comfort-inn-hotels/mo637?source=gyxt">
                     Comfort Inn Poplar Bluff North
-                    </a>
-                    <br/>Kristy has made a block of rooms at Comfort Inn in Poplar Bluff (which is literally <br/>
-                    steps away from where the cermony and reception will be). They have agreed to a rate of $78. <br/>
-                    If you want to stay here, the block is under "Ward Wedding"  <br/>
+                    </a><br/>
+                    <div style={{maxWidth: 400}}>
+                    Kristy has made a block of rooms at Comfort Inn in Poplar Bluff (which is literally
+                    steps away from where the cermony and reception will be). They have agreed to a rate of $78. 
+                    If you want to stay here, the block is under "Ward Wedding".
+                    <br/>
                     <br/>
                     Phone #: 573-686-5200
                     <br/>
                     Price: $78
+                    </div>
                 </Card.Body>
                 </Accordion.Collapse>
             </Card>

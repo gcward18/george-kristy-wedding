@@ -24,10 +24,10 @@ class App extends  Component{
         <div>
           <Navigation />
           <hr />
-          <Route path={'/details'} render={() => <DetailsPage {...this.props} fontFamily={'Josefin Sans, cursive'} />} />
-          <Route path={'/rsvp'} render={() => <RSVPPage {...this.props} fontFamily={'Josefin Sans, cursive'}/>} />
-          <Route path={'/gallery'} render={() => <GalleryPage {...this.props}/>} fontFamily={'Josefin Sans, cursive'}/>
-          <Route path={'//'} render={() => <LandingPage {...this.props} fontFamily={'Josefin Sans, cursive'}/>} />
+          <Route path={'/details'} render={() => <DetailsPage {...this.props} fontFamily={'Josefin Sans'} />} />
+          <Route path={'/rsvp'} render={() => <RSVPPage {...this.props} fontFamily={'Josefin Sans'}/>} />
+          <Route path={'/gallery'} render={() => <GalleryPage {...this.props}/>} fontFamily={'Josefin Sans'}/>
+          <Route path={'//'} render={() => <LandingPage {...this.props} fontFamily={'Josefin Sans'}/>} />
         </div>
       </HashRouter>
 

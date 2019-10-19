@@ -55,31 +55,30 @@ class RSVPPageBase extends Component{
 
       <Form onSubmit={this.onSubmit}>
         <Form.Group as={Col} >
-          <Form.Label style={{fontFamily: 'Josefin Sans, cursive'}}>Name</Form.Label>
-          <Form.Control name="name" type="text" placeholder="Full Name" onChange={this.onChange}/>
+          <Form.Label style={{fontFamily: 'Josefin Sans'}}>Name</Form.Label>
+          <Form.Control name="name" type="text" placeholder="Full Name" style={{fontFamily: 'Josefin Sans',fontSize:14}} onChange={this.onChange}/>
         </Form.Group>
 
         <Form.Group as={Col} >
-          <Form.Label style={{fontFamily: 'Josefin Sans, cursive'}}>Attending</Form.Label>
-          <Form.Control name="attending" as="select" placeholder="Choose one..."onChange={this.onChange}>
-            <option>Choose one...</option>
+          <Form.Label style={{fontFamily: 'Josefin Sans'}}>Attending</Form.Label>
+          <Form.Control name="attending" as="select" placeholder="" style={{fontFamily: 'Josefin Sans',fontSize:14}} onChange={this.onChange}>
             <option>Yes</option>
             <option>No</option>
           </Form.Control>
         </Form.Group>
 
         <Form.Group as={Col} >
-          <Form.Label style={{fontFamily: 'Josefin Sans, cursive'}}>Number in Party</Form.Label>
-          <Form.Control name="num_party" type="number" placeholder="0" min="0" onChange={this.onChange}/>
+          <Form.Label style={{fontFamily: 'Josefin Sans'}}>Number in Party</Form.Label>
+          <Form.Control name="num_party" type="number" placeholder="0" min="1" style={{fontFamily: 'Josefin Sans',fontSize:14}} onChange={this.onChange}/>
         </Form.Group>
         
         <Form.Group as={Col}>
-          <Form.Label style={{fontFamily: 'Josefin Sans, cursive'}}>Notes for Bride and Groom</Form.Label>
-          <Form.Control name="notes" as="textarea" rows="3" onChange={this.onChange}/>
+          <Form.Label style={{fontFamily: 'Josefin Sans'}}>Notes for Bride and Groom</Form.Label>
+          <Form.Control name="notes" as="textarea" rows="3" style={{fontFamily: 'Josefin Sans',fontSize:14}} onChange={this.onChange}/>
         </Form.Group>
 
         <div className="col-12 text-right">
-          <Button className="btn" variant="primary" type="submit"  style={{fontFamily: 'Josefin Sans, cursive'}}>
+          <Button className="btn" variant="primary" type="submit"  style={{fontFamily: 'Josefin Sans'}}>
             Submit
           </Button>
         </div>
