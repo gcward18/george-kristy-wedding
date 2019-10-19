@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/george-kristy-wedding/static/js/main.e49d0935.chunk.js",
-    "main.js.map": "/george-kristy-wedding/static/js/main.e49d0935.chunk.js.map",
+    "main.js": "/george-kristy-wedding/static/js/main.bb728f13.chunk.js",
+    "main.js.map": "/george-kristy-wedding/static/js/main.bb728f13.chunk.js.map",
     "runtime-main.js": "/george-kristy-wedding/static/js/runtime-main.2e1bf3cc.js",
     "runtime-main.js.map": "/george-kristy-wedding/static/js/runtime-main.2e1bf3cc.js.map",
     "static/css/2.510409cd.chunk.css": "/george-kristy-wedding/static/css/2.510409cd.chunk.css",
-    "static/js/2.b3785107.chunk.js": "/george-kristy-wedding/static/js/2.b3785107.chunk.js",
-    "static/js/2.b3785107.chunk.js.map": "/george-kristy-wedding/static/js/2.b3785107.chunk.js.map",
+    "static/js/2.1ad564ba.chunk.js": "/george-kristy-wedding/static/js/2.1ad564ba.chunk.js",
+    "static/js/2.1ad564ba.chunk.js.map": "/george-kristy-wedding/static/js/2.1ad564ba.chunk.js.map",
     "index.html": "/george-kristy-wedding/index.html",
-    "precache-manifest.f0db5e411b19e83a2369d3132a6f6ff6.js": "/george-kristy-wedding/precache-manifest.f0db5e411b19e83a2369d3132a6f6ff6.js",
+    "precache-manifest.0be28144f6e5a4a8d53749e369a82d71.js": "/george-kristy-wedding/precache-manifest.0be28144f6e5a4a8d53749e369a82d71.js",
     "service-worker.js": "/george-kristy-wedding/service-worker.js",
     "static/css/2.510409cd.chunk.css.map": "/george-kristy-wedding/static/css/2.510409cd.chunk.css.map",
     "static/media/IMG_0187.jpg": "/george-kristy-wedding/static/media/IMG_0187.50a5fafa.jpg",
@@ -104,7 +104,7 @@
   "entrypoints": [
     "static/js/runtime-main.2e1bf3cc.js",
     "static/css/2.510409cd.chunk.css",
-    "static/js/2.b3785107.chunk.js",
-    "static/js/main.e49d0935.chunk.js"
+    "static/js/2.1ad564ba.chunk.js",
+    "static/js/main.bb728f13.chunk.js"
   ]
 }
